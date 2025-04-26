@@ -6,8 +6,8 @@ A full-stack application to manage student housing applications and room allocat
 
 ## Deployment Links
 
-- Frontend (GitHub Pages): [Campus Hostel Frontend](https://your-github-username.github.io/campus-hostel-frontend/)
-- Backend (Render): [Campus Hostel Backend](https://campus-hostel-backend.onrender.com)
+- Frontend (GitHub Pages): [Campus Hostel Frontend](https://github.com/Rodbak123/campus-hostel-frontend)
+- Backend (Render): [Campus Hostel Backend](https://campus-hostel-backend-ztbe.onrender.com)
 
 ## Login Details (for testing)
 
