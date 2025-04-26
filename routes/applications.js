@@ -1,9 +1,10 @@
 const express = require('express');
 const db = require('../config/db');
 const jwt = require('jsonwebtoken');
+
 const router = express.Router();
 
-
+// Get all applications
 router.get('/', async (req, res) => {
   try {
     const result = await db.query(
@@ -16,7 +17,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-
+// Submit a new application
 router.post('/', async (req, res) => {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.status(401).json({ error: 'Missing token' });
@@ -47,7 +48,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-
+// Get the current student's application
 router.get('/me', async (req, res) => {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.status(401).json({ error: 'No token provided' });
@@ -75,7 +76,7 @@ router.get('/me', async (req, res) => {
   }
 });
 
-
+// Update application status (for admin)
 router.post('/process/:id', async (req, res) => {
   const { status } = req.body;
   try {
